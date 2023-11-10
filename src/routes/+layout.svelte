@@ -1,5 +1,12 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
+	import { AppShell, AppBar } from '@skeletonlabs/skeleton'
 </script>
 
-<slot />
+
+<AppShell>
+	<svelte:fragment slot="header">
+		<AppBar>My Puzzle app</AppBar>
+	</svelte:fragment>
+	<slot />
+</AppShell>
